@@ -1,16 +1,11 @@
 "use client";
 
-import { useTheme } from "@/hooks/use-theme";
-import { ReactNode, useEffect } from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+
+import { ComponentProps, useEffect } from "react";
 
 // TODO: Fix FOUC
 
-export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme] = useTheme();
-
-  useEffect(() => {
-    document.body.classList.toggle("dark", theme === "dark");
-  }, [theme]);
-
-  return <>{children}</>;
-};
+export const ThemeProvider = ({ children, ...props }: ComponentProps<typeof NextThemesProvider>) => (
+  <NextThemesProvider {...props}>{children}</NextThemesProvider>
+);

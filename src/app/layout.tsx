@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto_Mono, Lato } from "next/font/google";
+
 import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 import "./globals.css";
 
 const fontSans = Lato({
@@ -32,9 +34,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} ${fontMono.variable}`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ThemeSwitcher />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
