@@ -1,9 +1,10 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
-import { Roboto_Mono, Lato } from "next/font/google";
+import { Lato,Roboto_Mono } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import "./globals.css";
 
 const fontSans = Lato({
   variable: "--font-lato",
