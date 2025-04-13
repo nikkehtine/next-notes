@@ -5,7 +5,10 @@ Notes app using **React**, **Next.js**, **TailwindCSS**, **PostgreSQL**
 ## Getting started
 
 1. Clone this repo
-2. Run `pnpm dev`
+2. Run `pnpm i` to install dependencies
+3. Run `pnpm db:generate`, `pnpm db:migrate` and `pnpm db:push`
+4. Run `docker compose up` (or `docker compose up dev` for development environment)
+5. Run `docker compose down` when you're done
 
 ## Design
 
