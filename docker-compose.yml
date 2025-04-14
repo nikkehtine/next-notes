@@ -10,6 +10,8 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    environment:
+      - DATABASE_URL=postgresql://postgres:strongpassword@db:5432/next-notes-db
 
   dev:
     build:
@@ -23,6 +25,8 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    environment:
+      - DATABASE_URL=postgresql://postgres:strongpassword@db:5432/next-notes-db
 
   db:
     image: postgres:17-alpine
