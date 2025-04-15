@@ -30,13 +30,13 @@ export const RecentPost = () => {
   return (
     <div className="w-full max-w-sm space-y-2 rounded-md bg-black/15 px-8 py-6 text-zinc-100/75 backdrop-blur-lg">
       {isLoadingPosts ? (
-        <p className="text-base/6 text-[#ececf399]">Loading posts...</p>
+        <p className="text-base/6 text-neutral-400">Loading posts...</p>
       ) : recentPost ? (
-        <p className="text-base/6 text-[#ececf399]">
+        <p className="text-base/6 text-neutral-400">
           Your recent post: "{recentPost.name}"
         </p>
       ) : (
-        <p className="text-base/6 text-[#ececf399]">You have no posts yet.</p>
+        <p className="text-base/6 text-neutral-400">You have no posts yet.</p>
       )}
       <form
         onSubmit={(e) => {

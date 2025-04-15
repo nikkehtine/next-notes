@@ -4,8 +4,8 @@ import { Providers } from "./components/providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JStack App",
-  description: "Created using JStack",
+  title: "Next Notes",
+  description: "Web application for taking notes",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
